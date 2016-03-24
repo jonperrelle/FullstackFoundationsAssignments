@@ -55,10 +55,6 @@ input[type="submit"] {
 	color: #ffffff;
 }
 
-.btn:active, .btn:hover {
-	background-color: #ffffff !important;
-}
-
 .btn-group .btn-default {
 	margin-top: 10px;
 	width: 200px;
