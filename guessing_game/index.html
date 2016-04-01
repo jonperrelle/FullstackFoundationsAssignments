@@ -8,6 +8,7 @@
   	<link rel="stylesheet" href="styles.css" />
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  	<script src="guessingGame.js"></script>
 </head>
 <body class="container">
 	<header>
@@ -15,17 +16,16 @@
 	</header>
 	<img src="mark.png" />
 	<section class="text-center">
-		<form class="form-horizontal" role="form">
-			<div class="form-group">
-				<label for="guess-box" id="guess-label">Pick a number from 1 to 100:</label>
-					<input type="number" name="number" min="1" max="100" />
-				<input type="submit" class="btn btn-default btn-lg" value="Guess" />
-			</div>
-		</form>
+		<p>You have <span>5</span> guesses to guess the correct number</p>
+		<div class="form-group">
+			<label for="guess-box" id="guess-label">Pick a number from 1 to 100:</label>
+				<input type="number" name="number" min="1" max="100" id="player-guess"/>
+			<input type="submit" class="btn btn-default btn-lg" value="Guess" id="submit" />
+		</div>
 		<div class="btn-group">
-			<button type="button" class="btn btn-default">Play Again</button>
-			<button type="button" class="btn btn-default">Give Me A Hint</button>
-			<button type="button" class="btn btn-default">Show Me The Number</button>
+			<button type="button" class="btn btn-default" id="play-again">Play Again</button>
+			<button type="button" class="btn btn-default" id="hint">Give Me A Hint</button>
+			<button type="button" class="btn btn-default" id="answer">Show Me The Number</button>
 		</div>
 	</section>
 </body>
