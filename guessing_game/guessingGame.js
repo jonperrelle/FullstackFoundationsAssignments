@@ -66,6 +66,11 @@ function winOrLose (text1, text2, class1, image1) {
  	});
 }
 
+function gameOver(bool) {
+	$("#hint").prop("disabled", bool)
+	$("#submit").prop("disabled", bool)
+}
+
 // Check if the Player's Guess is the winning number 
 function checkGuess(){
 	if (playersGuess > 100 || playersGuess < 1) {
@@ -78,11 +83,13 @@ function checkGuess(){
 		else if (playersGuess === winningNumber) {
 			winOrLose("Congratulations!", "<p>You Won!</p>", "winner", "thumbs_up.png");
 			$("#thumbs-up").show().delay(5000).fadeOut(1000);
+			gameOver(true);
 		}
 		else {
 			guessNum--;
 			if (guessNum === 0) {
- 	    		winOrLose("Sorry, no more guesses.", "<p>You Lose!</p>", "loser", "thumbs_down.png")
+ 	    		winOrLose("Sorry, no more guesses.", "<p>You Lose!</p>", "loser", "thumbs_down.png");
+ 	    		gameOver(true);
 			}
 			else {
 				textReplace(guessMessage() + "<br/>You have <span>" + guessNum + "</span> guesses left.");
@@ -115,6 +122,7 @@ function endOfGame(text) {
 // Allow the "Player" to Play Again
 function playAgain(){
 	winningNumber = generateWinningNumber();
+	gameOver(false);
 	guessNum = 5;
 	guessArr = [];
 	endOfGame("Let's play again. Guess a new number.")
