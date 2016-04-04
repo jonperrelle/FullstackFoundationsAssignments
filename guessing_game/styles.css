@@ -1,0 +1,83 @@
+body {
+	background-color: #1D1D1C;
+	font-family: Futura, cursive, sans-serif;
+	height: 100%;
+	width: 100%;
+	color: #ffffff;
+}
+
+header {
+	height: 125px;
+	margin-top: -20px;
+}
+
+header h1 {
+	text-align: center;
+	font-size: 3.5em;
+	padding-top: 20px;
+}
+
+img {
+	animation: spin 3s linear 3;
+	font-size:10em;
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 40px;
+}
+
+@keyframes spin {
+	to {transform: rotatey(360deg)};
+}
+
+#guess-label {
+	font-size: 1.5em;
+	margin-top: -10px;
+}
+
+#player-guess {
+	margin: 0 0 10px 50px;
+	width: 250px;
+	height: 100px;
+    border-radius: 10px;
+	font-size: 30px;
+	text-align: center;
+	color: #000000;
+}
+
+input[type="submit"] {
+	margin: 0 0 15px 50px;
+	height: 80px;
+	width: 80px;
+	border-radius:50%;
+}
+
+.btn-default {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.btn-group .btn-default {
+	margin-top: 10px;
+	width: 200px;
+}
+
+section p {
+	font-size: 1.5em;
+	padding-bottom: 5px;
+}
+
+section p span {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.loser {
+	font-size: 4em;
+	color: #FB2C2C;
+}
+
+.winner {
+	font-size: 4em;
+	color: #3ADF00;
+}
+
